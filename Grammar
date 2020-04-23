@@ -1,0 +1,51 @@
+S -> NP VP | NP AuxP | NP VtP
+
+% noun phrases including NPrp, NProSub and NounPhrase
+NP -> NPrp | NProSub | NounPhrase | DemP | DemS
+% general noun phrases -> determiner + noun or noun
+NounPhrase -> DemP NounPlural | NounPlural | DemS NounA | DemS NounAn | DetG Noun | DetA NounA | DetAn NounAn | NounSpecial
+% with adj phrase in between determiner and noun phrases 
+NounPhrase -> DemP AdjP NounPlural | AdjP NounPlural | DemS AdjP NounA | DemS AdjP NounAn | DetG AdjP Noun | DetA AdjP NounA | DetAn AdjP NounAn | AdjP NounSpecial 
+NounPhrase -> NounPhrase PP
+% nouns can be modified by DetG (use this for convenience)
+Noun -> NounPlural | NounA | NounAn | NounSpecial 
+% the noun phrases used in proposition phrases and complement phrases
+NPPro -> NPrp | NProObj | NounPhrase
+% the complement phrases used after transitive verbs
+NPComp ->  NPPro | ConjObj S
+
+% adjective phrases, can have multiple adjectives for noun
+AdjP -> Adj | Adj AdjP
+
+% proposition phrases
+PP -> P NPPro | ConjAdv S 
+PP -> P NPPro PP | PP ConjAdv S
+
+% verb phrases for simple sentences
+Vi -> ViS | ViPa 
+VP -> Vi | Vi PVP ViS | Vi AdvP PVP ViS
+VP -> VP AdvP | Adv VP
+% adverb phrases 
+AdvP -> Adv | Adv PP | PP
+
+% verb phrases for tansitive verbs with simple tense
+VtSP -> VtS NPComp | VtS NPComp NPComp | VtS NPComp PVP ViS
+% verb phrases for tansitive verbs with present tense
+VtPing -> VtPr NPComp | VtPr NPComp NPComp | VtPr NPComp PVP ViS
+% participal phrases ends with have that can be used in auxiliary system
+ParticipleHave -> PerfectHaves | Modal Have 
+% participal phrases ends with be that can be used in auxiliary system
+ParticipleBe -> PerfectHaves Been Being | Modal Have Been Being | AuxBe Being 
+% participal phrases end with 'been'
+ParticipleBeenP -> AuxBe | AuxBe Adv | Modal BeS| Modal BeS Adv  
+ParticipleBeenP -> PerfectHaves Been | PerfectHaves Been Adv | PerfectHaves Adv Been
+ParticipleBeenP -> Modal Have Been | Modal Have Been Adv | Modal Have Adv Been
+% phrases for the auxiliary system
+AuxP -> Modal ViS | Modal Adv ViS | Modal VtSP | Modal Adv VtSP | Modal BeS VtPing | Modal BeS Adv VtPing
+AuxP -> ParticipleHave ViPP | ParticipleHave VtPP NPComp | ParticipleHave VtPP NPComp NPComp | ParticipleHave Adv VtPP NPComp | ParticipleHave Adv VtPP NPComp NPComp
+AuxP -> ParticipleBe ViPP | ParticipleBe VtPP 
+AuxP -> ParticipleBeenP ViPP | ParticipleBeenP ViPr | ParticipleBeenP VtPP
+AuxP -> Adv AuxP | AuxP AdvP 
+% transitive verb phrases
+VtP -> VtPa NPComp | VtPa NPComp NPComp| | VtPa NPComp PVP ViS
+VtP -> Adv VtP | VtP AdvP

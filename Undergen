@@ -1,0 +1,19 @@
+% can not recognize simple tense tansitive verbs with complement
+the cats give Google an eggplant
+I demand a cat soon
+he buy a cat for me
+
+% 'be' is followed by an adjective
+he is tall
+Ross is handsome
+he must be tall
+
+% cannot recognize of + verb(present tense)
+Nadia reminded Ross of being a cat
+
+% tansitive verb + to can not be recognized
+Ross may want to jump with him
+Ross was told to jump
+
+% can not recognize 'this' as a noun
+he has brought this for you

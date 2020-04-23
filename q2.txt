@@ -1,0 +1,9 @@
+a: 
+    There are 8 trees.
+b: 
+    By replacing the NP rule to NP -> NP PP | Det N, the recursive-descent parser will be recursing infinitly. 
+    The reason is that "NP PP" is prioritized over "Det N", the parser will keep tring "NP PP". However, the default sentence is starting with "Det N".
+c: 
+    By replacing the NP rule to NP -> Det N | NP PP, the recursive-descent parser works fine for the default sentence. 
+    However, if we consider some general cases, this order change will not give an adequate solution sometimes. 
+    The reason is that if the NP is not starting with Det, the praser will recurse infinitly.

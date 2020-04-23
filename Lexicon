@@ -1,0 +1,76 @@
+% Determiners
+DetA -> 'a' 
+DetAn -> 'an'
+% represents general determiners that can be used for all types of nouns.
+DetG -> 'the' | 'my'| 'her' | 'his' | 'their' | 'our' | 'your'
+% singular version of demonstrative pronoun
+DemS -> 'this' | 'that' 
+% plural version of demonstrative pronoun
+DemP -> 'these' | 'those'
+
+% Nouns
+% subjective pronouns
+NProSub -> 'I' | 'you' | 'he' | 'she' | 'it' | 'we' | 'they'
+% objective pronouns
+NProObj -> 'me' | 'you' | 'him' | 'her' | 'it' | 'us' | 'them'
+% names or proper nouns
+NPrp -> 'Nadia' | 'Marseilles' | 'Google' | 'Ross' | 'Paris'
+% nouns that can start with determiner 'a'
+NounA -> 'cat' | 'fur' | 'rutabaga' | 'boat' | 'poodle' | 'cloth' | 'cheese' | 'man' | 'hovercraft' | 'help' | 'menu' | 'left' | 'shot' | 'jump' | 'win' | 'saw' | 'reward' | 'demand' | 'find' | 'film'
+% nouns that can start with determiner 'an'
+NounAn -> 'eggplant' | 'autoclave' | 'elephant' | 'autopoiesis' 
+% nouns in plural form
+NounPlural -> 'cats' | 'furs'| 'rutabagas' | 'eggplants' | 'boats' | 'poodles' | 'autoclaves' | 'cloths' | 'cheeses' | 'men' | 'elephants' | 'hovercrafts' | 'autopoieses' | 'menus' | 'shots' | 'jumps'| 'wins' | 'saws' | 'rewards' | 'demands' | 'finds'
+% nouns that does not require determiner
+NounSpecial -> 'fur' | 'rutabaga'| 'eggplant' |'cheese'| 'help' | 'autopoiesis' | 'want'
+
+% Preposition
+% general prepositions
+P -> 'with' | 'for' | 'on' | 'onto' | 'to' | 'of' | 'from' | 'before' | 'after'
+% preposition that conjuncts two verb phrase
+PVP -> 'to'
+
+% Adj used in the test sentences
+Adv -> 'slowly' | 'immediately' | 'already' | 'really' | 'always' | 'before' | 'after' | 'yesterday' | 'soon' | 'early' | 'pretty'
+% Adv used in the test sentences
+Adj -> 'handsome' | 'tall' | 'long' | 'soft' | 'fur'
+
+% Conjunction
+% object clause
+ConjObj -> 'that'
+% adverb clause
+ConjAdv -> 'before' | 'after'
+
+% auxiliaries
+% the modal verbs used in the test sentences which are followed by simple tense 
+Modal -> 'can' | 'may' | 'could' | 'should' | 'shall' | 'might' | 'must' | 'would' | 'will'
+% perfect tense in different forms
+PerfectHaves -> 'have' | 'has' | 'had'
+% original format of the perfect tense
+Have -> 'have'
+% the auxiliaries be
+AuxBe -> 'is' | 'are' | 'am' | 'was' | 'were'
+% be in past participal
+Been -> 'been'
+% the simple form of be
+BeS -> 'be'
+% the present tense of be
+Being -> 'being'
+
+% other verbs
+% intransitive verbs in simple tense
+ViS -> 'help' | 'be' | 'arrive' | 'aspire' | 'leave' | 'shoot' | 'eat' | 'fondle' | 'jump' | 'believe' | 'win' | 'see' | 'want' | 'demand' | 'give'
+% intransitive verbs in present tense
+ViPr -> 'helping' | 'being' | 'arriving' | 'aspiring' | 'leaving' | 'shooting' | 'eating' | 'fondling' | 'jumping' | 'believing' | 'winning' | 'seeing' | 'wanting' | 'demanding' | 'giving'
+% intransitive verbs in past tense
+ViPa -> 'helped' | 'was' | 'were'| 'arrived' | 'aspired' | 'left' | 'shot' | 'ate' | 'fondled' | 'jumped' | 'believed' | 'won' | 'saw' | 'wanted' | 'demanded' | 'gave' | 'returned'
+% intransitive verbs in past participal
+ViPP -> 'helped' | 'been' | 'arrived' | 'aspired' | 'left' | 'shot' | 'eaten' | 'fondled' | 'jumped' | 'believed' | 'won' | 'seen' | 'wanted' | 'demanded' | 'given' | 'returned'
+% transitive verbs in simple tense
+VtS -> 'help' | 'have' | 'be' | 'arrive' | 'aspire' | 'leave' | 'shoot' | 'eat' | 'fondle' |'buy' | 'tell' |'jump' | 'believe' | 'win' | 'see' | 'want' | 'demand' | 'give'  | 'remind' | 'reward' | 'give'
+% transitive verbs in present tense
+VtPr -> 'helping' | 'having' | 'arriving' | 'aspiring' | 'leaving' | 'shooting' | 'eating' | 'fondling' | 'buying' | 'telling' | 'jumping' | 'believing' | 'winning' | 'seeing' | 'wanting' | 'reminding' | 'rewarding' | 'demanding' | 'finding' | 'giving'
+% transitive verbs in past tense
+VtPa -> 'helped' | 'had' | 'was' | 'were' | 'left' | 'shot' | 'ate' | 'fondled' | 'brought' | 'told' | 'jumped' | 'believed' | 'won' | 'saw' | 'wanted' | 'reminded' | 'rewarded' | 'demanded' | 'found' | 'gave'
+% transitive verbs in past participal
+VtPP -> 'helped' | 'had' | 'been' | 'left' | 'shot' | 'eaten' | 'fondled' | 'brought' | 'told' | 'jumped' | 'believed' | 'won' | 'seen' | 'wanted' | 'reminded' | 'rewarded' | 'demanded' | 'found' | 'given'
